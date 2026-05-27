@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TALMA PERÚ - GESTIÓN DE TRAZABILIDAD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <h1>TALMA PERÚ</h1>
+            <p>GESTIÓN DE TRAZABILIDAD POR RANGOS - SMART-CONTROL CCO</p>
+        </div>
+        <div class="header-right">
+            <span class="clock">OPERACIONES REAL-TIME</span>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar-card">
+            <h2>NUEVA ASIGNACIÓN</h2>
+            <hr class="divider">
+            
+            <form id="vueloForm">
+                <div class="inline-inputs">
+                    <div class="form-group">
+                        <label>VUELO</label>
+                        <input type="text" id="vuelo" placeholder="N° VUELO" required>
+                    </div>
+                    <div class="form-group">
+                        <label>MATRÍCULA</label>
+                        <input type="text" id="matricula" placeholder="MATRÍCULA">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>PEA DESTINO (MAPA LAP)</label>
+                    <select id="pea" required>
+                        <option value="">-- SELECCIONE DESTINO --</option>
+                        <optgroup label="Zona Espigón Central Norte (300 L/R)">
+                            <option value="301-L">PEA 301-L</option>
+                            <option value="301-R">PEA 301-R</option>
+                            <option value="302-L">PEA 302-L</option>
+                            <option value="302-R">PEA 302-R</option>
+                            <option value="303-L">PEA 303-L</option>
+                            <option value="303-R">PEA 303-R</option>
+                            <option value="304-L">PEA 304-L</option>
+                            <option value="304-R">PEA 304-R</option>
+                            <option value="305-L">PEA 305-L</option>
+                            <option value="305-R">PEA 305-R</option>
+                            <option value="306-L">PEA 306-L</option>
+                            <option value="306-R">PEA 306-R</option>
+                        </optgroup>
+                        <optgroup label="Zona Espigón Central Sur (400 L/R)">
+                            <option value="401-L">PEA 401-L</option>
+                            <option value="401-R">PEA 401-R</option>
+                            <option value="402-L">PEA 402-L</option>
+                            <option value="402-R">PEA 402-R</option>
+                            <option value="403-L">PEA 403-L</option>
+                            <option value="403-R">PEA 403-R</option>
+                            <option value="404-L">PEA 404-L</option>
+                            <option value="404-R">PEA 404-R</option>
+                            <option value="405-L">PEA 405-L</option>
+                            <option value="405-R">PEA 405-R</option>
+                            <option value="406-L">PEA 406-L</option>
+                            <option value="406-R">PEA 406-R</option>
+                        </optgroup>
+                        <optgroup label="Zona Norte (501 - 506)">
+                            <option value="501">PEA 501</option>
+                            <option value="502">PEA 502</option>
+                            <option value="503">PEA 503</option>
+                            <option value="504">PEA 504</option>
+                            <option value="505">PEA 505</option>
+                            <option value="506">PEA 506</option>
+                        </optgroup>
+                        <optgroup label="Zona Remotas Inferior (601 - 605)">
+                            <option value="601">PEA 601</option>
+                            <option value="602">PEA 602</option>
+                            <option value="603">PEA 603</option>
+                            <option value="604">PEA 604</option>
+                            <option value="605">PEA 605</option>
+                        </optgroup>
+                        <optgroup label="Terminal Internacional / Nacional Norte (101 - 118)">
+                            <option value="101">PEA 101</option>
+                            <option value="102">PEA 102</option>
+                            <option value="103">PEA 103</option>
+                            <option value="104">PEA 104</option>
+                            <option value="105">PEA 105</option>
+                            <option value="106">PEA 106</option>
+                            <option value="107">PEA 107</option>
+                            <option value="108">PEA 108</option>
+                            <option value="109">PEA 110</option>
+                            <option value="111">PEA 111</option>
+                            <option value="112">PEA 112</option>
+                            <option value="113">PEA 113</option>
+                            <option value="114">PEA 114</option>
+                            <option value="115">PEA 115</option>
+                            <option value="116">PEA 116</option>
+                            <option value="117">PEA 117</option>
+                            <option value="118">PEA 118</option>
+                        </optgroup>
+                        <optgroup label="Terminal Nacional Sur (201 - 212)">
+                            <option value="201-R">PEA 201-R</option>
+                            <option value="202-R">PEA 202-R</option>
+                            <option value="203">PEA 203</option>
+                            <option value="204">PEA 204</option>
+                            <option value="205">PEA 205</option>
+                            <option value="206">PEA 206</option>
+                            <option value="207">PEA 207</option>
+                            <option value="208">PEA 208</option>
+                            <option value="209">PEA 209</option>
+                            <option value="210">PEA 210</option>
+                            <option value="211">PEA 211</option>
+                            <option value="212">PEA 212</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>AUXILIAR / COORDINADOR</label>
+                    <input type="text" id="personal" placeholder="Escriba Nombre o Código" required>
+                </div>
+
+                <div class="form-group">
+                    <label>UBICACIÓN ACTUAL</label>
+                    <select id="estadoAuxiliar" required>
+                        <option value="En BASE">En BASE</option>
+                        <option value="En PEA">En PEA</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn-submit" onclick="asignarServicio()">REGISTRAR Y CALCULAR ETA</button>
+            </form>
+        </aside>
+
+        <section class="main-monitor-card">
+            <div class="monitor-header">
+                <h3>MONITOR REAL-TIME CCO</h3>
+            </div>
+            <div class="table-container">
+                <table id="tablaServicios">
+                    <thead>
+                        <tr>
+                            <th>DETALLE DEL VUELO</th>
+                            <th>FASES DE DESPLAZAMIENTO</th>
+                            <th style="text-align: right;">ESTATUS / ETA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
